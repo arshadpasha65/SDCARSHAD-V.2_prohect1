@@ -1,0 +1,13 @@
+:root
+{
+    --main-color : red;
+    --color-1 : 
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.nav1
+{
+   background-color: var(--main-color);
+}
