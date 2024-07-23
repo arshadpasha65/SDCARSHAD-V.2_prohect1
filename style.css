@@ -1,6 +1,6 @@
 :root
 {
-    --main-color : red;
+    --main-color : orange;
     --color-1 : 
 }
 *{
@@ -10,4 +10,5 @@
 .nav1
 {
    background-color: var(--main-color);
+   
 }
