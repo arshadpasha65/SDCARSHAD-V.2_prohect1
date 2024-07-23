@@ -10,5 +10,25 @@
 .nav1
 {
    background-color: var(--main-color);
+   height: 1.5vw;
    
+}
+.nav1 h1{
+    font-size: 1vw;
+    padding: 0.5vh 0vw;
+}
+.nav2{
+    height: 9vw;
+    align-content: center;
+    display: flex;
+    
+}
+.nav2 img{
+    height: 7vw;
+    width: 7vw;
+    padding: 1vh 1vw;
+}
+.nav2 .info 
+{
+    padding: 2vh 4vw;
 }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Search Function</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #content {
+            width: 60%;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 10px;
+            top: 10px;
+        }
+
+        .search-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #search-input {
+            width: 200px;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #search-button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #search-button:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .pagination button {
+            padding: 5px 10px;
+            margin: 0 2px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination span {
+            padding: 5px 10px;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p>Sample text to demonstrate the search functionality. You can add more content here. Highlighted terms will appear in yellow.</p>
+        <p>Another line of sample text for searching and highlighting functionality. This is to show more content for testing.</p>
+        <!-- Add more content here as needed -->
+    </div>
+    <div class="search-container">
+        <div class="search-controls">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-button">Search</button>
+        </div>
+        <div id="pagination" class="pagination"></div>
+    </div>
+    <script>
+        let currentIndex = 0;
+        let results = [];
+
+        function performSearch() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const contentElement = document.getElementById('content');
+            const contentHTML = contentElement.innerHTML;
+
+            if (searchTerm.trim() === '') {
+                alert('Please enter a search term.');
+                return;
+            }
+
+            // Reset current index and results
+            currentIndex = 0;
+            results = [];
+
+            // Remove old highlights
+            contentElement.innerHTML = contentHTML.replace(/<span class="highlight">.*?<\/span>/g, match => match);
+
+            // Find new results
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            const newContentHTML = contentHTML.replace(regex, (match) => {
+                results.push(match);
+                return `<span class="highlight">${match}</span>`;
+            });
+
+            contentElement.innerHTML = newContentHTML;
+
+            // Display result count and pagination
+            if (results.length > 0) {
+                document.getElementById('pagination').innerHTML = `
+                    <span>Found ${results.length} results</span>
+                    <button onclick="navigate(-1)">Previous</button>
+                    <button onclick="navigate(1)">Next</button>
+                `;
+            } else {
+                alert(`The term "${searchTerm}" was not found on the page.`);
+                document.getElementById('pagination').innerHTML = '';
+            }
+        }
+
+        document.getElementById('search-button').addEventListener('click', performSearch);
+
+        document.getElementById('search-input').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        function navigate(direction) {
+            const highlightElements = document.querySelectorAll('#content .highlight');
+            if (highlightElements.length === 0) return;
+
+            // Remove previous highlight
+            if (highlightElements[currentIndex]) {
+                highlightElements[currentIndex].style.backgroundColor = 'yellow';
+            }
+
+            // Update current index
+            currentIndex += direction;
+
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= highlightElements.length) currentIndex = highlightElements.length - 1;
+
+            // Scroll to and highlight the current result
+            highlightElements[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            highlightElements[currentIndex].style.backgroundColor = 'orange';
+        }
+    </script>
+</body>
+</html>
