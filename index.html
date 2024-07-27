@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,115 +11,120 @@
 
 
 <body id="content">
-    
+
     <header>
-     <div class="nav1">
-        <h1>  <marquee> WELCOME TO SESHADRIPURAM DEGREE COLLOGE , MYSORE</marquee> </h1>
-     </div>
-     <!-- -----------------------------------------nav 2---------------------------------------------------------------- -->
-     <div class="nav2">
-        <img src="imgs/sdc-logo.png" alt="SDC_LOGO">
-
-        <div class="info">
-            <h2>SESHADRIPURAM DEGREE COLLEGE</h2>
-            <h4>Affiliated to the University of Mysore and Approved by AICTE</h4>
-            <p><span style="color: green;">ISO 9001:2015 Certified</span> | <span style="color: red;"> NAAC Accredited B++</span></p>
+        <div class="nav1">
+            <h1>
+                <marquee> WELCOME TO SESHADRIPURAM DEGREE COLLOGE , MYSORE</marquee>
+            </h1>
         </div>
+        <hr>
+        <!-- -----------------------------------------nav 2---------------------------------------------------------------- -->
+        <div class="nav2">
+            <img src="imgs/sdc-logo.png" alt="SDC_LOGO">
 
-        <div class="search">
-            <div class="search-container">
-                <div class="search-controls">
-                     <input type="text" id="search-input" placeholder="Search..." />
-                     <button id="search-button">Search</button>
-                </div>
+            <div class="info">
+                <h2>SESHADRIPURAM DEGREE COLLEGE</h2>
+                <h4>Affiliated to the University of Mysore and Approved by AICTE</h4>
+                <p><span style="color: green;">ISO 9001:2015 Certified</span> | <span style="color: red;"> NAAC
+                        Accredited B++</span></p>
+            </div>
+
+            <div class="search">
+                <div class="search-container">
+                    <div class="search-controls">
+                        <input type="text" id="search-input" placeholder="Search..." />
+                        <button id="search-button">Search</button>
+                    </div>
 
                     <div id="pagination" class="pagination">
-                           
-                        
-                     </div>
+
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
 
+        <hr>
         <!-- ******************************************************************* nav 3 ****************************** -->
-         <div class="nav3">
+        <div class="nav3">
 
-         </div>
-     
+        </div>
+        <hr>
     </header>
-    <!-- ************************************************Sections ***************************** -->
+    <!-- ************************************************Sections  1***************************** -->
 
     <div class="section" id="section1">
         <img src="imgs/sdc-bulding.jpeg" alt="Placeholder Image" class="placeholder-image">
-        <video class="video" >
+        <video class="video">
             <source src="Vedio/Sdc0_introducion.mp4" type="video/mp4">
         </video>
     </div>
 
-<!--     
+    <!--     
     <div class="section" id="section2">
         <video class="video" muted>
             <source src="Vedio/Sdc15_solar.mp4" type="video/mp4">
         </video> 
     </div> -->
 
+    <section id="sec2">
+
+        <center>
+        <div class="con1">
+            <div class="con1L">
+                <img src="imgs/principal.png" alt="principal">
+            </div>
+
+            <div class="con1R">
+                <h1>
+                    About Our Principal
+                </h1>
+                <br><br>
+                <p>  Our principal is an exemplary leader, dedicated to managing every aspect of our school with
+                    precision and care. She consistently strives to enhance the quality of education, ensuring each
+                    student reaches their highest potential. Her commitment to excellence is evident in the school's
+                    impressive academic achievements.
+                    <br>
+                    <br>
+
+                    Under her guidance, students are encouraged to excel not only academically but also in their
+                    personal growth. She fosters a nurturing environment where every student feels valued and supported.
+                    Her innovative approaches to education have transformed our school into a beacon of learning and
+                    development.
+                    <br>
+                    <br>
+                    We are incredibly grateful for her unwavering support and dedication. Her leadership has been
+                    instrumental in driving our school forward, setting high standards for both students and staff.
+                    Thank you, Principal, for your outstanding contributions and relentless efforts to improve our
+                    educational community.
+                    <br><br>
+                
+                </p>
+                <h2>
+                    Dr. Sowmya Erappa K
+                    <br>
+                    M.Com., M.Phil., B.Ed., Ph.D
+                </h2>
+            </div>
+        </div>
+    </center>
+    </section>
+
+    <section>
+        <h1>
+            hkhsdkfhlsd
+        </h1>
+    </section>
 
 
 
-    
 
-<!-- ---------------------------------------------------------- SCRIPS ----------------------------------- -->
 
-   
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videos = document.querySelectorAll('.video');
-        const firstSectionVideo = document.querySelector('#section1 .video');
-        const firstSectionImage = document.querySelector('#section1 .placeholder-image');
+    <!-- ---------------------------------------------------------- SCRIPS ----------------------------------- -->
 
-        const playVideo = (video) => {
-            video.play();
-        };
 
-        const pauseVideo = (video) => {
-            video.pause();
-            video.currentTime = 0; // Reset the video to start
-        };
-
-        const checkVideoVisibility = () => {
-            videos.forEach(video => {
-                const rect = video.getBoundingClientRect();
-                const inView = (
-                    rect.top >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-                );
-
-                if (inView) {
-                    playVideo(video);
-                } else {
-                    pauseVideo(video);
-                }
-            });
-        };
-
-        videos.forEach(video => {
-            video.addEventListener('mouseenter', () => {
-                playVideo(video);
-                video.removeEventListener('mouseenter', playVideo); // Remove event listener after first hover
-                video.addEventListener('ended', () => pauseVideo(video)); // Stop the video when it ends
-            });
-        });
-
-        firstSectionImage.addEventListener('mouseenter', () => {
-            firstSectionImage.style.display = 'none';
-            playVideo(firstSectionVideo);
-        });
-
-        window.addEventListener('scroll', checkVideoVisibility);
-        window.addEventListener('resize', checkVideoVisibility);
-        checkVideoVisibility(); // Initial check
-    });
-</script>
+    <script src="index.js"></script>
 </body>
+
 </html>
