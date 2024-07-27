@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <title>SESHADRIPURAM DEGRRE COLLEGE , MYSORE </title>
 </head>
+
+
+
 <body id="content">
     
     <header>
      <div class="nav1">
         <h1>  <marquee> WELCOME TO SESHADRIPURAM DEGREE COLLOGE , MYSORE</marquee> </h1>
      </div>
-     <!-- -----------------------------------------nav 2------------------------------------------------------------------ -->
+     <!-- -----------------------------------------nav 2---------------------------------------------------------------- -->
      <div class="nav2">
         <img src="imgs/sdc-logo.png" alt="SDC_LOGO">
 
@@ -21,6 +24,7 @@
             <h4>Affiliated to the University of Mysore and Approved by AICTE</h4>
             <p><span style="color: green;">ISO 9001:2015 Certified</span> | <span style="color: red;"> NAAC Accredited B++</span></p>
         </div>
+
         <div class="search">
             <div class="search-container">
                 <div class="search-controls">
@@ -29,90 +33,92 @@
                 </div>
 
                     <div id="pagination" class="pagination">
-
+                           
+                        
                      </div>
             </div>
         </div>
+    </div>
+    
+
         <!-- ******************************************************************* nav 3 ****************************** -->
-         <div class="nav3"></div>
+         <div class="nav3">
+
+         </div>
      
     </header>
+    <!-- ************************************************Sections ***************************** -->
+
+    <div class="section" id="section1">
+        <img src="imgs/sdc-bulding.jpeg" alt="Placeholder Image" class="placeholder-image">
+        <video class="video" >
+            <source src="Vedio/Sdc0_introducion.mp4" type="video/mp4">
+        </video>
+    </div>
+
+<!--     
+    <div class="section" id="section2">
+        <video class="video" muted>
+            <source src="Vedio/Sdc15_solar.mp4" type="video/mp4">
+        </video> 
+    </div> -->
+
+
 
 
     
 
+<!-- ---------------------------------------------------------- SCRIPS ----------------------------------- -->
 
+   
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const videos = document.querySelectorAll('.video');
+        const firstSectionVideo = document.querySelector('#section1 .video');
+        const firstSectionImage = document.querySelector('#section1 .placeholder-image');
 
-    <script>
-        let currentIndex = 0;
-        let results = [];
+        const playVideo = (video) => {
+            video.play();
+        };
 
-        function performSearch() {
-            const searchTerm = document.getElementById('search-input').value.toLowerCase();
-            const contentElement = document.getElementById('content');
-            const contentHTML = contentElement.innerHTML;
+        const pauseVideo = (video) => {
+            video.pause();
+            video.currentTime = 0; // Reset the video to start
+        };
 
-            if (searchTerm.trim() === '') {
-                alert('Please enter a search term.');
-                return;
-            }
+        const checkVideoVisibility = () => {
+            videos.forEach(video => {
+                const rect = video.getBoundingClientRect();
+                const inView = (
+                    rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                );
 
-            // Reset current index and results
-            currentIndex = 0;
-            results = [];
-
-            // Remove old highlights
-            contentElement.innerHTML = contentHTML.replace(/<span class="highlight">.*?<\/span>/g, match => match);
-
-            // Find new results
-            const regex = new RegExp(`(${searchTerm})`, 'gi');
-            const newContentHTML = contentHTML.replace(regex, (match) => {
-                results.push(match);
-                return `<span class="highlight">${match}</span>`;
+                if (inView) {
+                    playVideo(video);
+                } else {
+                    pauseVideo(video);
+                }
             });
+        };
 
-            contentElement.innerHTML = newContentHTML;
-
-            // Display result count and pagination
-            if (results.length > 0) {
-                document.getElementById('pagination').innerHTML = `
-                    <span>Found ${results.length} results</span>
-                    <button onclick="navigate(-1)">Previous</button>
-                    <button onclick="navigate(1)">Next</button>
-                `;
-            } else {
-                alert(`The term "${searchTerm}" was not found on the page.`);
-                document.getElementById('pagination').innerHTML = '';
-            }
-        }
-
-        document.getElementById('search-button').addEventListener('click', performSearch);
-
-        document.getElementById('search-input').addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                performSearch();
-            }
+        videos.forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                playVideo(video);
+                video.removeEventListener('mouseenter', playVideo); // Remove event listener after first hover
+                video.addEventListener('ended', () => pauseVideo(video)); // Stop the video when it ends
+            });
         });
 
-        function navigate(direction) {
-            const highlightElements = document.querySelectorAll('#content .highlight');
-            if (highlightElements.length === 0) return;
+        firstSectionImage.addEventListener('mouseenter', () => {
+            firstSectionImage.style.display = 'none';
+            playVideo(firstSectionVideo);
+        });
 
-            // Remove previous highlight
-            if (highlightElements[currentIndex]) {
-                highlightElements[currentIndex].style.backgroundColor = 'yellow';
-            }
-
-            // Update current index
-            currentIndex += direction;
-
-            if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex >= highlightElements.length) currentIndex = highlightElements.length - 1;
-
-            // Scroll to and highlight the current result
-            highlightElements[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-            highlightElements[currentIndex].style.backgroundColor = 'orange';
-        }
-    </script>
+        window.addEventListener('scroll', checkVideoVisibility);
+        window.addEventListener('resize', checkVideoVisibility);
+        checkVideoVisibility(); // Initial check
+    });
+</script>
 </body>
 </html>
