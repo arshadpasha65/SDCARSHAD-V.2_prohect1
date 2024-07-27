@@ -14,6 +14,8 @@
 {
    background-color: var(--main-color);
    height: 1.5vw;
+
+   width: 100%;
    
 }
 .nav1 h1{
@@ -25,6 +27,10 @@
     align-content: center;
     display: flex;
     justify-content: space-around;
+    background-color: #FFFF;
+    position: fixed;
+    width: 100%;
+    
 
     
 }
@@ -159,7 +165,7 @@
 /* -------------------------------- SEC 2 -------------------------------------- */
 
 #sec2{
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background-color: #f1f1f1;
    
