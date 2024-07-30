@@ -127,12 +127,13 @@
 /* *********************************************** vedio play of secions ********************* */
 
 .section {
-    height: 90vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #000;
     position: relative;
+    margin: 10%;
 }
 .sec3{
     height: 100vh;
