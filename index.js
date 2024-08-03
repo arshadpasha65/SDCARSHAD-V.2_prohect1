@@ -1,47 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const videos = document.querySelectorAll('.video');
-    const firstSectionVideo = document.querySelector('#section1 .video');
-    const firstSectionImage = document.querySelector('#section1 .placeholder-image');
 
-    const playVideo = (video) => {
-        video.play();
-    };
 
-    const pauseVideo = (video) => {
-        video.pause();
-        video.currentTime = 0; // Reset the video to start
-    };
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
 
-    const checkVideoVisibility = () => {
-        videos.forEach(video => {
-            const rect = video.getBoundingClientRect();
-            const inView = (
-                rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-
-            if (inView) {
-                playVideo(video);
-            } else {
-                pauseVideo(video);
-            }
-        });
-    };
-
-    videos.forEach(video => {
-        video.addEventListener('mouseenter', () => {
-            playVideo(video);
-            video.removeEventListener('mouseenter', playVideo); // Remove event listener after first hover
-            video.addEventListener('ended', () => pauseVideo(video)); // Stop the video when it ends
-        });
-    });
-
-    firstSectionImage.addEventListener('mouseenter', () => {
-        firstSectionImage.style.display = 'none';
-        playVideo(firstSectionVideo);
-    });
-
-    window.addEventListener('scroll', checkVideoVisibility);
-    window.addEventListener('resize', checkVideoVisibility);
-    checkVideoVisibility(); // Initial check
-});
