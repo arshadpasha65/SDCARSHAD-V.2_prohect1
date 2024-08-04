@@ -69,6 +69,9 @@
         <div class="overlay">
             <div class="buscon">
                 <div class="bus">
+                    <h1> Total Buses : <span id="counter" data-target="10">0<span></h1>
+                        <h1> 25 Passengers Bus : <span id="counter" data-target="3">0<span></h1>
+                            <h1> 55 Passengers Bus : <span id="counter" data-target="7">0<span></h1>
 
                 </div>
 
@@ -78,23 +81,16 @@
     </section>
 
 
-    <section id="sec4" class="video-section">
-        <video src="Vedio/Sdc0_introducion.mp4" autoplay muted loop playsinline></video>
-        <div class="overlay">
-
-        </div>
-
-    </section>
+ 
 
 
-
-    <section id="sec4" class="video-section">
+    <!-- <section id="sec4" class="video-section">
         <video src="Vedio/Sdc0_introducion.mp4" autoplay muted loop playsinline></video>
         <div class="overlay">
 
             <div class="conQL">
 
-                <a href="https://maps.app.goo.gl/f1sQFv3NVGKD4Gpa9"><img src="imgs/location_sdc.jpeg" alt=""></a>
+                <a href="https://maps.app.goo.gl/f1sQFv3NVGKD4Gpa9"><img src="imgs/location_sdc.jpeg" alt=""></a> -->
 
             </div>
 
@@ -107,51 +103,23 @@
         <center>
             <br>
             <span class="blink">
-           <a href="https://arshadpasha.netlify.app/" target="_blank"  style="text-decoration: none; color: #FFFF; ">  <h1>@ARSHAD</h1></a>
-        </span>
-            <br>
+                <a href="https://arshadpasha.netlify.app/" target="_blank" style="text-decoration: none; color: #FFFF; ">
+                    <h1>@ARSHAD</h1>
+                </a>
+            </span>
+                        <br>
 
-            <h1>Copyright©2024SDC</h1>
+                        <h1>Copyright©2024SDC</h1>
 
-            <br>
-            <img src="https://hitwebcounter.com/counter/counter.php?page=15362807&style=0006&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
-            <br>
-            <br>
-        </center>
+                        <br>
+                        <img src="https://hitwebcounter.com/counter/counter.php?page=15362807&style=0006&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+                        <br>
+                        <br>
+                        </center>
 
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const counter = document.getElementById('counter');
-            const target = +counter.getAttribute('data-target');
-            const popup = document.getElementById('popup');
-            let count = 0;
-            const increment = target / 200; // Adjust the speed of the counter
+                        </footer>
 
-            const updateCounter = () => {
-                count += increment;
-                if (count < target) {
-                    counter.innerText = Math.ceil(count);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.innerText = target;
-                    popup.style.display = 'block';
-                }
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    updateCounter();
-                    observer.disconnect();
-                }
-            }, {
-                threshold: 0.5
-            });
-
-            observer.observe(counter);
-        });
-    </script>
-    <script src="index.js"></script>
+                        <script src="index.js"></script>
 </body>
 
 </html>
