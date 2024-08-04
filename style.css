@@ -1,566 +1,560 @@
-                                                                  :root {
-                                                                     --main-color: orange;
-                                                                     --margin-left: 5%;
-                                                                     --color-1:
-                                                                 }
-                                                                 
-                                                                 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
-                                                                 * {
-                                                                     margin: 0;
-                                                                     padding: 0;
-                                                                     box-sizing: border-box;
-                                                                     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                                                                     transition: all 0.3s ease-in-out;
-                                                                 }
-                                                                 
-                                                                 body {
-                                                                     background-color: #ffffff;
-                                                                     user-select: none;
-                                                                 }
-                                                                 
-                                                                  ::selection {
-                                                                     background: #714F82;
-                                                                     color: #fff;
-                                                                 }
-                                                                 
-                                                                 .nav1 {
-                                                                     background-color: var(--main-color);
-                                                                     height: 2vw;
-                                                                     width: 100%;
-                                                                 }
-                                                                 
-                                                                 .nav1 h1 {
-                                                                     font-size: 1.5vw;
-                                                                     padding: 0.5vh 0vw;
-                                                                     text-align: center;
-                                                                     align-content: center;
-                                                                 }
-                                                                 
-                                                                 .nav2 {
-                                                                     height: 8vw;
-                                                                     align-content: center;
-                                                                     display: flex;
-                                                                     justify-content: space-around;
-                                                                     background-color: #FFFF;
-                                                                     /* position: fixed; */
-                                                                     width: 100%;
-                                                                 }
-                                                                 
-                                                                 .nav2 img {
-                                                                     height: 7vw;
-                                                                     width: 7vw;
-                                                                     padding: 1vh 1vw;
-                                                                 }
-                                                                 
-                                                                 .nav2 .info {
-                                                                     padding: 2vh 4vw;
-                                                                 }
-                                                                 
-                                                                 .sdc1 {
-                                                                     font-size: 2vw;
-                                                                 }
-                                                                 
-                                                                 .sdc2 {
-                                                                     font-size: 1.1vw;
-                                                                 }
-                                                                 /* SEARCH ************************************************************************************   */
-                                                                 
-                                                                 .search-container {
-                                                                     display: flex;
-                                                                     flex-direction: column;
-                                                                     float: right;
-                                                                     margin-top: 6%;
-                                                                     justify-content: center;
-                                                                 }
-                                                                 
-                                                                 .search-controls {
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     align-items: center;
-                                                                     margin-bottom: 10px;
-                                                                 }
-                                                                 
-                                                                 #search-input {
-                                                                     width: 200px;
-                                                                     padding: 10px;
-                                                                     margin-right: 10px;
-                                                                     border: 1px solid #ccc;
-                                                                     border-radius: 5px;
-                                                                 }
-                                                                 
-                                                                 #search-button {
-                                                                     padding: 10px;
-                                                                     border: none;
-                                                                     background-color: #007bff;
-                                                                     color: white;
-                                                                     border-radius: 5px;
-                                                                     cursor: pointer;
-                                                                 }
-                                                                 
-                                                                 #search-button:hover {
-                                                                     background-color: #0056b3;
-                                                                 }
-                                                                 
-                                                                 .pagination {
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     align-items: center;
-                                                                     margin-top: 10px;
-                                                                 }
-                                                                 
-                                                                 .pagination button {
-                                                                     padding: 5px 10px;
-                                                                     margin: 0 2px;
-                                                                     border: none;
-                                                                     background-color: #007bff;
-                                                                     color: white;
-                                                                     border-radius: 5px;
-                                                                     cursor: pointer;
-                                                                 }
-                                                                 
-                                                                 .pagination button:hover {
-                                                                     background-color: #0056b3;
-                                                                 }
-                                                                 
-                                                                 .pagination span {
-                                                                     padding: 5px 10px;
-                                                                 }
-                                                                 
-                                                                 .highlight {
-                                                                     background-color: yellow;
-                                                                     font-weight: bold;
-                                                                 }
-                                                                 
-                                                                 .nav3 {
-                                                                     background-color: rgba(63, 190, 31, 0.719);
-                                                                     height: 5vw;
-                                                                     width: 100%;
-                                                                 }
-                                                                 /* ************************************* nav end all****************************** */
-                                                                 /* ----------------------------------------sec1-------------------------- */
-                                                                 
-                                                                 #sec1 {
-                                                                     width: 100%;
-                                                                     height: auto;
-                                                                 }
-                                                                 
-                                                                 #sec1 img {
-                                                                     width: 100%;
-                                                                     height: auto;
-                                                                 }
-                                                                 /* -------------------------------- SEC 2 -------------------------------------- */
-                                                                 
-                                                                 #sec2 {
-                                                                     position: relative;
-                                                                     width: 100%;
-                                                                     height: 100vh;
-                                                                 }
-                                                                 
-                                                                 .con1 {
-                                                                     height: 100vh;
-                                                                     width: 100vw;
-                                                                     display: flex;
-                                                                     margin-left: var(--margin-left);
-                                                                 }
-                                                                 
-                                                                 .con1 .con1L {
-                                                                     width: 50%;
-                                                                     height: 100vh;
-                                                                 }
-                                                                 
-                                                                 .con1L img {
-                                                                     height: auto;
-                                                                     width: 100%;
-                                                                 }
-                                                                 
-                                                                 .con1 .con1R {
-                                                                     width: 60%;
-                                                                     height: 100vh;
-                                                                     margin-right: var(--margin-left);
-                                                                 }
-                                                                 
-                                                                 .con1R h1 {
-                                                                     font-size: 3vw;
-                                                                 }
-                                                                 
-                                                                 .con1L h1 {
-                                                                     font-size: 2vw;
-                                                                 }
-                                                                 
-                                                                 .pp {
-                                                                     font-size: 2vw;
-                                                                     text-align: justify;
-                                                                     width: 90%;
-                                                                     color: #ffff;
-                                                                     font-weight: 400;
-                                                                     margin-left: 5%;
-                                                                 }
-                                                                 /* ***************************************************** SLIDER OF # IMGS ******************** */
-                                                                 /* * ----------------------------------- media for DEtop------------------------------------------  */
-                                                                 
-                                                                 @media (min-width: 1000px) {
-                                                                     .slideshow-container {
-                                                                         padding: 40px 80px;
-                                                                         transition: background-color 0.6s ease;
-                                                                     }
-                                                                 }
-                                                                 /* Caption text */
-                                                                 
-                                                                 .text {
-                                                                     color: #f2f2f2;
-                                                                     font-size: 15px;
-                                                                     padding: 8px 12px;
-                                                                     position: absolute;
-                                                                     bottom: 8px;
-                                                                     width: 100%;
-                                                                     text-align: center;
-                                                                 }
-                                                                 /* Number text (1/3 etc) */
-                                                                 
-                                                                 .numbertext {
-                                                                     color: #f2f2f2;
-                                                                     font-size: 12px;
-                                                                     padding: 8px 12px;
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                 }
-                                                                 /* The dots/bullets/indicators */
-                                                                 
-                                                                 .dot {
-                                                                     height: 15px;
-                                                                     width: 15px;
-                                                                     margin: 0 2px;
-                                                                     background-color: #bbb;
-                                                                     border-radius: 50%;
-                                                                     display: inline-block;
-                                                                     transition: background-color 0.6s ease;
-                                                                 }
-                                                                 
-                                                                 .active {
-                                                                     background-color: #717171;
-                                                                 }
-                                                                 /* Fading animation */
-                                                                 
-                                                                 .fade {
-                                                                     animation-name: slideln;
-                                                                     animation-duration: 1.5s;
-                                                                 }
-                                                                 
-                                                                 @keyframes fade {
-                                                                     from {
-                                                                         opacity: .4
-                                                                     }
-                                                                     to {
-                                                                         opacity: 1
-                                                                     }
-                                                                 }
-                                                                 /* ***************************************************** SLIDER OF # IMGS END *************** */
-                                                                 /* --------------------------------------sec 3------------------- */
-                                                                 
-                                                                 #sec3 {
-                                                                     height: 90vh;
-                                                                     width: 100%;
-                                                                 }
-                                                                 
-                                                                 .con2 {
-                                                                     height: 70vh;
-                                                                     max-width: 95%;
-                                                                     display: flex;
-                                                                 }
-                                                                 
-                                                                 .con2-cs {
-                                                                     height: 90%;
-                                                                     width: 25%;
-                                                                     border: 1px solid red;
-                                                                     margin: 4%;
-                                                                 }
-                                                                 
-                                                                 .con2-cs img {
-                                                                     height: 45%;
-                                                                     width: 100%;
-                                                                     border-radius: 8%;
-                                                                     margin: 1%;
-                                                                 }
-                                                                 
-                                                                 .con2-cs p {
-                                                                     font-size: 1.4vw;
-                                                                     text-align: justify;
-                                                                     text-align: center;
-                                                                 }
-                                                                 
-                                                                 .con2-cs:hover {
-                                                                     box-shadow: wheat;
-                                                                 }
-                                                                 
-                                                                 .co_f {
-                                                                     font-size: larger;
-                                                                     background-color: #3F1056;
-                                                                     color: #ffff;
-                                                                     cursor: pointer;
-                                                                 }
-                                                                 
-                                                                 .co_f:hover {
-                                                                     color: #3F1056;
-                                                                     cursor: pointer;
-                                                                     background-color: #bbb;
-                                                                 }
-                                                                 
-                                                                 .co {
-                                                                     padding: 30px;
-                                                                 }
-                                                                 /* ---------------------------------------sec4 ------------------------------- */
-                                                                 
-                                                                 #sec4 {
-                                                                     position: relative;
-                                                                     width: 100%;
-                                                                     height: 100vh;
-                                                                 }
-                                                                 
-                                                                 video {
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                     left: 0;
-                                                                     width: 100%;
-                                                                     height: 100%;
-                                                                     object-fit: cover;
-                                                                     z-index: 1;
-                                                                     opacity: 0.7;
-                                                                     /* Adjust the opacity to make the video slightly transparent */
-                                                                 }
-                                                                 
-                                                                 .overlay {
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                     left: 0;
-                                                                     width: 100%;
-                                                                     height: 100%;
-                                                                     background: rgba(0, 0, 0, 0.4);
-                                                                     /* Darker overlay */
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     align-items: center;
-                                                                     z-index: 2;
-                                                                 }
-                                                                 
-                                                                 #sec4 .overlay p {
-                                                                     color: black;
-                                                                     font-size: 2em;
-                                                                     text-align: justify;
-                                                                     margin: 20px 20px;
-                                                                     font-weight: 900;
-                                                                 }
-                                                                 /* Media query for responsiveness */
-                                                                 
-                                                                 @media (max-width: 768px) {
-                                                                     .overlay p {
-                                                                         font-size: 1.5em;
-                                                                         /* Smaller text size for mobile */
-                                                                     }
-                                                                 }
-                                                                 /* -----------------------SEC 5--------------- */
-                                                                 
-                                                                 .container_fac {
-                                                                     position: relative;
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     align-items: center;
-                                                                     flex-wrap: wrap;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box {
-                                                                     position: relative;
-                                                                     width: 180px;
-                                                                     height: 180px;
-                                                                     margin: 2.8rem 4rem;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box1 {
-                                                                     position: relative;
-                                                                     width: 170px;
-                                                                     height: 170px;
-                                                                     margin: 2.8rem 3rem;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box:hover .imgBox {
-                                                                     transform: translate(-3.5rem, -3.5rem);
-                                                                 }
-                                                                 
-                                                                 .container_fac .box:hover .content {
-                                                                     transform: translate(3.5rem, 3.5rem);
-                                                                 }
-                                                                 
-                                                                 .container_fac .box1:hover .imgBox1 {
-                                                                     transform: translate(-3.5rem, -3.5rem);
-                                                                 }
-                                                                 
-                                                                 .container_fac .box1:hover .content {
-                                                                     transform: translate(3.5rem, 3.5rem);
-                                                                 }
-                                                                 
-                                                                 .imgBox {
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                     left: 0;
-                                                                     width: 100%;
-                                                                     height: 100%;
-                                                                     z-index: 2;
-                                                                     transition: all 0.5s ease-in-out;
-                                                                 }
-                                                                 
-                                                                 .imgBox1 {
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                     left: 0;
-                                                                     width: 100%;
-                                                                     height: 100%;
-                                                                     z-index: 2;
-                                                                     transition: all 0.5s ease-in-out;
-                                                                 }
-                                                                 
-                                                                 .imgBox img {
-                                                                     width: 190x;
-                                                                     height: 190px;
-                                                                     object-fit: cover;
-                                                                     resize: both;
-                                                                 }
-                                                                 
-                                                                 .imgBox1 img {
-                                                                     width: 170x;
-                                                                     height: 170px;
-                                                                     object-fit: cover;
-                                                                     resize: both;
-                                                                 }
-                                                                 
-                                                                 .container2 .box1 .content1 {
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                     left: 0;
-                                                                     width: 100%;
-                                                                     height: 100%;
-                                                                     z-index: 1;
-                                                                     display: flex;
-                                                                     padding: 20px;
-                                                                     align-items: flex-end;
-                                                                     box-sizing: border-box;
-                                                                 }
-                                                                 
-                                                                 .container2 .box1 .content1 h2 {
-                                                                     color: #fff;
-                                                                     transition: 0.5s;
-                                                                     text-transform: uppercase;
-                                                                     margin-bottom: 5px;
-                                                                     font-size: 20px;
-                                                                     transform: translateY(200px);
-                                                                     transition-delay: 0.3s;
-                                                                 }
-                                                                 
-                                                                 .container2 .box1:hover .content1 h2 {
-                                                                     transform: translateY(0px);
-                                                                 }
-                                                                 
-                                                                 .container2 .box1 .content1 p {
-                                                                     color: #fff;
-                                                                     transition: 0.5s;
-                                                                     font-size: 14px;
-                                                                     transform: translateY(200px);
-                                                                     transition-delay: 0.4s;
-                                                                 }
-                                                                 
-                                                                 .container2 .box1:hover .content1 p {
-                                                                     transform: translateY(0px);
-                                                                 }
-                                                                 
-                                                                 .content h2 {
-                                                                     display: block;
-                                                                     font-size: 18px;
-                                                                     color: #ffffff;
-                                                                     font-weight: 500;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box:hover .content {
-                                                                     transform: translate(3.5rem, 3.5rem);
-                                                                 }
-                                                                 
-                                                                 .content {
-                                                                     position: absolute;
-                                                                     top: 0;
-                                                                     left: 0;
-                                                                     width: 100%;
-                                                                     height: 100%;
-                                                                     padding: 1.0rem;
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     background-color: #1A1343;
-                                                                     z-index: 1;
-                                                                     align-items: flex-end;
-                                                                     text-align: center;
-                                                                     transition: 0.5s ease-in-out;
-                                                                 }
-                                                                 
-                                                                 content p {
-                                                                     line-height: 20px;
-                                                                 }
-                                                                 
-                                                                 .heroalign {
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     align-items: center;
-                                                                 }
-                                                                 
-                                                                 .container_fac {
-                                                                     position: relative;
-                                                                     display: flex;
-                                                                     justify-content: center;
-                                                                     align-items: center;
-                                                                     flex-wrap: wrap;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box {
-                                                                     position: relative;
-                                                                     width: 180px;
-                                                                     height: 180px;
-                                                                     margin: 2.8rem 4rem;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box1 {
-                                                                     position: relative;
-                                                                     width: 170px;
-                                                                     height: 170px;
-                                                                     margin: 2.8rem 3rem;
-                                                                 }
-                                                                 
-                                                                 .container_fac .box:hover .imgBox {
-                                                                     transform: translate(-3.5rem, -3.5rem);
-                                                                 }
-                                                                 
-                                                                 .container_fac .box:hover .content {
-                                                                     transform: translate(3.5rem, 3.5rem);
-                                                                 }
-                                                                 
-                                                                 .container_fac .box1:hover .imgBox1 {
-                                                                     transform: translate(-3.5rem, -3.5rem);
-                                                                 }
-                                                                 
-                                                                 .container_fac .box1:hover .content {
-                                                                     transform: translate(3.5rem, 3.5rem);
-                                                                 }
-                                                                 /* ------------------------QL---------- */
-                                                                 
-                                                                 .conQL {
-                                                                     width: 100%;
-                                                                     border: 1px solid red;
-                                                                     height: 100vh;
-                                                                     display: flex;
-                                                                 }
-                                                                 
-                                                                 .qlR {
-                                                                     width: 50%;
-                                                                     height: 100vh;
-                                                                     border: 1px solid red;
-                                                                 }
-                                                                 
-                                                                 .qlL {
-                                                                     width: 50%;
-                                                                     height: 100vh;
-                                                                     border: 1px solid red;
-                                                                 }
+                 :root {
+                    --main-color: orange;
+                    --margin-left: 5%;
+                    --color-1:
+                }
+                
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    transition: all 0.3s ease-in-out;
+                }
+                
+                body {
+                    background-color: #ffffff;
+                    user-select: none;
+                }
+                
+                 ::selection {
+                    background: #714F82;
+                    color: #fff;
+                }
+                
+                .nav1 {
+                    background-color: var(--main-color);
+                    height: 2vw;
+                    width: 100%;
+                }
+                
+                .nav1 h1 {
+                    font-size: 1.5vw;
+                    padding: 0.5vh 0vw;
+                    text-align: center;
+                    align-content: center;
+                }
+                
+                .nav2 {
+                    height: 8vw;
+                    align-content: center;
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: #FFFF;
+                    /* position: fixed; */
+                    width: 100%;
+                }
+                
+                .nav2 img {
+                    height: 7vw;
+                    width: 7vw;
+                    padding: 1vh 1vw;
+                }
+                
+                .nav2 .info {
+                    padding: 2vh 4vw;
+                }
+                
+                .sdc1 {
+                    font-size: 2vw;
+                }
+                
+                .sdc2 {
+                    font-size: 1.1vw;
+                }
+                /* SEARCH ************************************************************************************   */
+                
+                .search-container {
+                    display: flex;
+                    flex-direction: column;
+                    float: right;
+                    margin-top: 6%;
+                    justify-content: center;
+                }
+                
+                .search-controls {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                }
+                
+                #search-input {
+                    width: 200px;
+                    padding: 10px;
+                    margin-right: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+                
+                #search-button {
+                    padding: 10px;
+                    border: none;
+                    background-color: #007bff;
+                    color: white;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                
+                #search-button:hover {
+                    background-color: #0056b3;
+                }
+                
+                .pagination {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+                
+                .pagination button {
+                    padding: 5px 10px;
+                    margin: 0 2px;
+                    border: none;
+                    background-color: #007bff;
+                    color: white;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                
+                .pagination button:hover {
+                    background-color: #0056b3;
+                }
+                
+                .pagination span {
+                    padding: 5px 10px;
+                }
+                
+                .highlight {
+                    background-color: yellow;
+                    font-weight: bold;
+                }
+                
+                .nav3 {
+                    background-color: rgba(63, 190, 31, 0.719);
+                    height: 5vw;
+                    width: 100%;
+                }
+                /* ************************************* nav end all****************************** */
+                /* ----------------------------------------sec1-------------------------- */
+                
+                #sec1 {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                #sec1 img {
+                    width: 100%;
+                    height: auto;
+                }
+                /* -------------------------------- SEC 2 -------------------------------------- */
+                
+                #sec2 {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                }
+                
+                .con1 {
+                    height: 100vh;
+                    width: 100vw;
+                    display: flex;
+                    margin-left: var(--margin-left);
+                }
+                
+                .con1 .con1L {
+                    width: 50%;
+                    height: 100vh;
+                }
+                
+                .con1L img {
+                    height: auto;
+                    width: 100%;
+                }
+                
+                .con1 .con1R {
+                    width: 60%;
+                    height: 100vh;
+                    margin-right: var(--margin-left);
+                }
+                
+                .con1R h1 {
+                    font-size: 3vw;
+                }
+                
+                .con1L h1 {
+                    font-size: 2vw;
+                }
+                
+                .pp {
+                    font-size: 2vw;
+                    text-align: justify;
+                    width: 90%;
+                    color: #ffff;
+                    font-weight: 400;
+                    margin-left: 5%;
+                }
+                /* ***************************************************** SLIDER OF # IMGS ******************** */
+                /* * ----------------------------------- media for DEtop------------------------------------------  */
+                
+                @media (min-width: 1000px) {
+                    .slideshow-container {
+                        padding: 40px 80px;
+                        transition: background-color 0.6s ease;
+                    }
+                }
+                /* Caption text */
+                
+                .text {
+                    color: #f2f2f2;
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                }
+                /* Number text (1/3 etc) */
+                
+                .numbertext {
+                    color: #f2f2f2;
+                    font-size: 12px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    top: 0;
+                }
+                /* The dots/bullets/indicators */
+                
+                .dot {
+                    height: 15px;
+                    width: 15px;
+                    margin: 0 2px;
+                    background-color: #bbb;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: background-color 0.6s ease;
+                }
+                
+                .active {
+                    background-color: #717171;
+                }
+                /* Fading animation */
+                
+                .fade {
+                    animation-name: slideln;
+                    animation-duration: 1.5s;
+                }
+                
+                @keyframes fade {
+                    from {
+                        opacity: .4
+                    }
+                    to {
+                        opacity: 1
+                    }
+                }
+                /* ***************************************************** SLIDER OF # IMGS END *************** */
+                /* --------------------------------------sec 3------------------- */
+                
+                #sec3 {
+                    height: 90vh;
+                    width: 100%;
+                }
+                
+                .con2 {
+                    height: 70vh;
+                    max-width: 95%;
+                    display: flex;
+                }
+                
+                .con2-cs {
+                    height: 90%;
+                    width: 25%;
+                    border: 1px solid red;
+                    margin: 4%;
+                }
+                
+                .con2-cs img {
+                    height: 45%;
+                    width: 100%;
+                    border-radius: 8%;
+                    margin: 1%;
+                }
+                
+                .con2-cs p {
+                    font-size: 1.4vw;
+                    text-align: justify;
+                    text-align: center;
+                }
+                
+                .con2-cs:hover {
+                    box-shadow: wheat;
+                }
+                
+                .co_f {
+                    font-size: larger;
+                    background-color: #3F1056;
+                    color: #ffff;
+                    cursor: pointer;
+                }
+                
+                .co_f:hover {
+                    color: #3F1056;
+                    cursor: pointer;
+                    background-color: #bbb;
+                }
+                
+                .co {
+                    padding: 30px;
+                }
+                /* ---------------------------------------sec4 ------------------------------- */
+                
+                #sec4 {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                }
+                
+                video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 1;
+                    opacity: 0.7;
+                    /* Adjust the opacity to make the video slightly transparent */
+                }
+                
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.4);
+                    /* Darker overlay */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2;
+                }
+                
+                #sec4 .overlay p {
+                    color: black;
+                    font-size: 2em;
+                    text-align: justify;
+                    margin: 20px 20px;
+                    font-weight: 900;
+                }
+                /* Media query for responsiveness */
+                
+                @media (max-width: 768px) {
+                    .overlay p {
+                        font-size: 1.5em;
+                        /* Smaller text size for mobile */
+                    }
+                }
+                /* -----------------------SEC 5--------------- */
+                
+                .container_fac {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                
+                .container_fac .box {
+                    position: relative;
+                    width: 180px;
+                    height: 180px;
+                    margin: 2.8rem 4rem;
+                }
+                
+                .container_fac .box1 {
+                    position: relative;
+                    width: 170px;
+                    height: 170px;
+                    margin: 2.8rem 3rem;
+                }
+                
+                .container_fac .box:hover .imgBox {
+                    transform: translate(-3.5rem, -3.5rem);
+                }
+                
+                .container_fac .box:hover .content {
+                    transform: translate(3.5rem, 3.5rem);
+                }
+                
+                .container_fac .box1:hover .imgBox1 {
+                    transform: translate(-3.5rem, -3.5rem);
+                }
+                
+                .container_fac .box1:hover .content {
+                    transform: translate(3.5rem, 3.5rem);
+                }
+                
+                .imgBox {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    transition: all 0.5s ease-in-out;
+                }
+                
+                .imgBox1 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    transition: all 0.5s ease-in-out;
+                }
+                
+                .imgBox img {
+                    width: 190x;
+                    height: 190px;
+                    object-fit: cover;
+                    resize: both;
+                }
+                
+                .imgBox1 img {
+                    width: 170x;
+                    height: 170px;
+                    object-fit: cover;
+                    resize: both;
+                }
+                
+                .container2 .box1 .content1 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    display: flex;
+                    padding: 20px;
+                    align-items: flex-end;
+                    box-sizing: border-box;
+                }
+                
+                .container2 .box1 .content1 h2 {
+                    color: #fff;
+                    transition: 0.5s;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    transform: translateY(200px);
+                    transition-delay: 0.3s;
+                }
+                
+                .container2 .box1:hover .content1 h2 {
+                    transform: translateY(0px);
+                }
+                
+                .container2 .box1 .content1 p {
+                    color: #fff;
+                    transition: 0.5s;
+                    font-size: 14px;
+                    transform: translateY(200px);
+                    transition-delay: 0.4s;
+                }
+                
+                .container2 .box1:hover .content1 p {
+                    transform: translateY(0px);
+                }
+                
+                .content h2 {
+                    display: block;
+                    font-size: 18px;
+                    color: #ffffff;
+                    font-weight: 500;
+                }
+                
+                .container_fac .box:hover .content {
+                    transform: translate(3.5rem, 3.5rem);
+                }
+                
+                .content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 1.0rem;
+                    display: flex;
+                    justify-content: center;
+                    background-color: #1A1343;
+                    z-index: 1;
+                    align-items: flex-end;
+                    text-align: center;
+                    transition: 0.5s ease-in-out;
+                }
+                
+                content p {
+                    line-height: 20px;
+                }
+                
+                .heroalign {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .container_fac {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                
+                .container_fac .box {
+                    position: relative;
+                    width: 180px;
+                    height: 180px;
+                    margin: 2.8rem 4rem;
+                }
+                
+                .container_fac .box1 {
+                    position: relative;
+                    width: 170px;
+                    height: 170px;
+                    margin: 2.8rem 3rem;
+                }
+                
+                .container_fac .box:hover .imgBox {
+                    transform: translate(-3.5rem, -3.5rem);
+                }
+                
+                .container_fac .box:hover .content {
+                    transform: translate(3.5rem, 3.5rem);
+                }
+                
+                .container_fac .box1:hover .imgBox1 {
+                    transform: translate(-3.5rem, -3.5rem);
+                }
+                
+                .container_fac .box1:hover .content {
+                    transform: translate(3.5rem, 3.5rem);
+                }
+                /* ------------------------QL---------- */
+                
+                .conQL {
+                    float: left;
+                    margin-top: 30%;
+                    margin-left: 60%;
+                    border-radius: 30%;
+                }
+                
+                .conQL img {
+                    width: 100%;
+                    height: 30vh;
+                    float: left;
+                }
