@@ -63,8 +63,28 @@
     </header>
 
 
-    <!-- --------------------------------------------------------- SLIDER ******************************************* -->
 
+    <section id="sec4" class="video-section">
+        <video src="Vedio/Sdc17_transportation.mp4" autoplay muted loop playsinline></video>
+        <div class="overlay">
+            <div class="buscon">
+                <div class="bus">
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="sec4" class="video-section">
+        <video src="Vedio/Sdc0_introducion.mp4" autoplay muted loop playsinline></video>
+        <div class="overlay">
+
+        </div>
+
+    </section>
 
 
 
@@ -94,13 +114,43 @@
             <h1>Copyright©2024SDC</h1>
 
             <br>
-            <img src="https://hitwebcounter.com/counter/counter.php?page=15361263&style=0032&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+            <img src="https://hitwebcounter.com/counter/counter.php?page=15362807&style=0006&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
             <br>
             <br>
         </center>
 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counter = document.getElementById('counter');
+            const target = +counter.getAttribute('data-target');
+            const popup = document.getElementById('popup');
+            let count = 0;
+            const increment = target / 200; // Adjust the speed of the counter
 
+            const updateCounter = () => {
+                count += increment;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target;
+                    popup.style.display = 'block';
+                }
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    observer.disconnect();
+                }
+            }, {
+                threshold: 0.5
+            });
+
+            observer.observe(counter);
+        });
+    </script>
     <script src="index.js"></script>
 </body>
 
